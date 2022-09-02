@@ -1,0 +1,50 @@
+.red{
+    border-radius: 6px;
+    border-style: ridge;
+    background-color: red;
+    color:azure;
+    padding: 5px;
+    
+}
+
+.time{
+    color:green;
+    font-family: monospace;
+    font-size: 2rem;
+    font-weight: bold;
+    
+    padding: 0.2rem;
+}
+
+.timeBox{
+    display: inline-block;
+    background-color: #111111;
+    margin: 1rem;
+    border-radius: 6px;
+    border-style:inset;
+    border-color: aliceblue;
+}
+
+#timerRoot{
+    display: inline-block;
+    padding: 1rem;
+    background-color:cadetblue;
+}
+
+.timer{
+    display: inline-block;
+    margin: 1rem;
+}
+
+.timerControl{
+    width: 33%;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    /* width: 100%; */
+    padding: 0.5rem;
+    margin: auto;
+}
