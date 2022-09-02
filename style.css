@@ -28,12 +28,15 @@
 #timerRoot{
     display: inline-block;
     padding: 1rem;
-    background-color:cadetblue;
+
 }
 
 .timer{
     display: inline-block;
     margin: 1rem;
+    background-color:cadetblue;
+    padding: 1rem;
+    border-radius: 5px;
 }
 
 .timerControl{
