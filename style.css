@@ -1,3 +1,31 @@
+body 
+{
+	margin: auto;
+    /* font-size: 1.2em; */
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:darkgrey;
+    border-radius: 10px;
+}
+
+.middle{
+    display: block;
+}
+
+
+.heading{
+    display: block;
+    text-align: center;
+    font-size: 4rem;
+    color:blue;
+    min-width: 100%;
+}
+
+
 .red{
     border-radius: 6px;
     border-style: ridge;
@@ -25,9 +53,10 @@
     border-color: aliceblue;
 }
 
-#timerRoot{
-    display: inline-block;
-    padding: 1rem;
+.timers{
+    min-width: 100%;
+    display: flex;
+    justify-content: space-evenly;
 
 }
 
@@ -40,7 +69,7 @@
 }
 
 .timerControl{
-    width: 33%;
+    width: 31%;
 }
 
 .buttons{
@@ -48,6 +77,30 @@
     justify-content: space-evenly;
     text-align: center;
     /* width: 100%; */
-    padding: 0.5rem;
+    padding: 0.4rem;
     margin: auto;
+}
+
+.lapTime{
+    display: block;
+    width: 90%;
+    height: 2rem;
+    max-height: 2rem;
+    background-color:aliceblue;
+    border-radius: 4px;
+    overflow-y: scroll;
+    margin: auto;
+
+}
+
+@media (min-width: 900px) {
+	
+    .main-container{
+		width: 80%;
+        max-width: 1280px;
+        margin: auto;
+	}
+
+   
+   	
 }

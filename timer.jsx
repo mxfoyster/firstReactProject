@@ -6,11 +6,12 @@ class Clock extends React.Component {
     super(props);
     let thisDate = new Date()
     let thisTime = thisDate.getTime()
-    this.state = {startTime: thisTime, time: 0, stoppedTime: 0 , offsetTime: 0,  running: false};
+    this.state = {startTime: thisTime, time: 0, stoppedTime: 0 , offsetTime: 0,  running: false, laps: []};
     
-    //so we can access the state in our from within our pauseClicked() and resetClicked() functions
+    //so we can access the state in our from within our ***Clicked() functions
     this.pauseClicked = this.pauseClicked.bind(this); 
     this.resetClicked = this.resetClicked.bind(this);
+    this.lapClicked = this.lapClicked.bind(this);
   }
 
   //runs at launch (Like Unity Start?)
@@ -54,8 +55,15 @@ class Clock extends React.Component {
   resetClicked(){
     let thisDate = new Date()
     let thisTime = thisDate.getTime()
-    this.setState ({startTime: thisTime, time: 0, stoppedTime: 0 , offsetTime: 0,  running: false});
+    this.setState ({startTime: thisTime, time: 0, stoppedTime: 0 , offsetTime: 0,  running: false, laps: []});
     this.updateTime();
+  }
+
+  lapClicked(){
+    let lapArray = [...this.state.laps];
+    lapArray.push(this.formatMsToTime(this.state.time));
+    console.log(lapArray);
+    this.setState({laps: lapArray}); 
   }
 
   updateTime(){
@@ -89,8 +97,13 @@ class Clock extends React.Component {
         <br />
         <span className="buttons">
           <button onClick={this.pauseClicked} className="timerControl">{(this.state.running) ? "PAUSE" : (this.state.time === 0) ? "START" :"RESUME"}</button>
+          <button onClick={this.lapClicked} className="timerControl">LAP</button>
           <button onClick={this.resetClicked} className="timerControl">RESET</button>
         </span>
+        <div className="lapTime">{this.state.laps.map((value, index) => (
+          <Lap key={index} lapNumber={index} lapTime={value}/> //we need the key to have a unique 
+          ))} 
+        </div>
         
       </span>
       
@@ -98,15 +111,23 @@ class Clock extends React.Component {
   }
 }
 
+//gives us three instances of Clock
 function TimeApp() {
   return (
-    <div>
+    <div className="timers">
       <Clock />
       <Clock />
       <Clock />
     </div>
   );
 }
+
+//component for lap time (used in Clock component)
+const Lap = ({ lapNumber, lapTime}) => (
+  <div>
+    LAP {lapNumber +1}: {lapTime}
+  </div>
+);
 
 //handle to the actual DOM
 const timerRoot = ReactDOM.createRoot(document.getElementById('timerRoot'));
