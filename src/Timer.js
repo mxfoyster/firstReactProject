@@ -7,7 +7,7 @@ class Clock extends React.Component {
     super(props);
     let thisDate = new Date()
     let thisTime = thisDate.getTime()
-    this.state = {startTime: thisTime, time: 0, stoppedTime: 0 , offsetTime: 0,  running: false, laps: []};
+    this.state = {startTime: thisTime, time: 0, stoppedTime: 0 , offsetTime: 0,  running: false, laps: [], lapAdded: false};
     
     //so we can access the state in our from within our ***Clicked() functions
     this.pauseClicked = this.pauseClicked.bind(this); 
@@ -21,6 +21,14 @@ class Clock extends React.Component {
       () => this.tick(),
       10
     );
+  }
+
+  componentDidUpdate() {
+    //if we added a lap, we want to scroll to the bottom but only ONCE hence a flag we reset
+    if (this.state.lapAdded){
+      scrollToBottom();
+      this.setState({lapAdded: false});
+    };
   }
 
   //runs when we're done (Component removed?)
@@ -63,8 +71,7 @@ class Clock extends React.Component {
   lapClicked(){
     let lapArray = [...this.state.laps];
     lapArray.push(this.formatMsToTime(this.state.time));
-    console.log(lapArray);
-    this.setState({laps: lapArray}); 
+    this.setState({laps: lapArray, lapAdded: true}); //we also set our flag so we can scroll box down later
   }
 
   updateTime(){
@@ -101,11 +108,11 @@ class Clock extends React.Component {
           <button onClick={this.lapClicked} className="timerControl">LAP</button>
           <button onClick={this.resetClicked} className="timerControl">RESET</button>
         </span>
-        <div className="lapTime">{this.state.laps.map((value, index) => (
-          <Lap key={index} lapNumber={index} lapTime={value}/> //we need the key to have a unique 
+        <div className="lapTime" id='lapBox'>{this.state.laps.map((value, index) => (
+          <Lap key={index} lapNumber={index} lapTime={value} /> //we need the key to have a unique 
           ))} 
         </div>
-        
+      {/* {if (this.state.lapAdded){console.log("lap Added");}}   */}
       </span>
       
     );
@@ -126,12 +133,14 @@ function TimeApp() {
 //component for lap time (used in Clock component)
 const Lap = ({ lapNumber, lapTime}) => (
   <div>
-    LAP {lapNumber +1}: {lapTime}
+    <b>LAP {lapNumber +1}:</b> {lapTime}
   </div>
+  
 );
 
-//handle to the actual DOM
-//const timerRoot = ReactDOM.createRoot(document.getElementById('timerRoot'));
-//render the class
-//timerRoot.render(<TimeApp />);
+function scrollToBottom(){
+  let lapDiv = document.getElementById("lapBox");
+  lapDiv.scrollTop = lapDiv.scrollHeight;
+}
+
 export default TimeApp;

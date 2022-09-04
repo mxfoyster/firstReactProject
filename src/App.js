@@ -10,7 +10,7 @@ function App() {
             <img src={logo} width="250" height="250" className="logo" alt="React Logo"/>
             <div>
                 <h1 className="heading">My First React Project</h1>
-                <h2>by Mark Foyster</h2>
+                <h2 className='subHeading'>By Mark Foyster</h2>
             </div>
         </header>
         

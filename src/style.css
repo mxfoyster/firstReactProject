@@ -1,11 +1,13 @@
 body 
 {
 	margin: auto;
+    padding: 0.5rem;
     /* font-size: 1.2em; */
 }
 
 header{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     background-color:darkgrey;
@@ -23,6 +25,11 @@ header{
     font-size: 4rem;
     color:blue;
     min-width: 100%;
+}
+
+.subHeading{
+    display: block;
+    text-align: center;
 }
 
 
@@ -57,7 +64,7 @@ header{
     min-width: 100%;
     display: flex;
     justify-content: space-evenly;
-
+    flex-wrap: wrap;
 }
 
 .timer{
@@ -84,8 +91,8 @@ header{
 .lapTime{
     display: block;
     width: 90%;
-    height: 2rem;
-    max-height: 2rem;
+    height: 2.5rem;
+    /* max-height: 2.5rem; */
     background-color:aliceblue;
     border-radius: 4px;
     overflow-y: scroll;
