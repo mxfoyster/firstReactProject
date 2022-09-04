@@ -1,4 +1,4 @@
-//runs at launch (Like Unity Start?)
+<span class="comment">//runs at launch (Like Unity Start?)</span>
   componentDidMount() {
     this.timerID = setInterval(
       () => this.tick(),

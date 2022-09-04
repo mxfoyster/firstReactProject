@@ -24,6 +24,7 @@ function App() {
             <p>Just a simple timer component made using React. I have found one big benefit of react is that by using <i>STATE</i> variables, I can make a component that can be instantiated as many times as I like without having to think about variables clashing. Each instantiation of the component is abstract from the other. Below, I have 3 instances of the component. See how they work independently of each other.</p>
             <div id="timerRoot"><TimeApp/></div>
         </div>
+          <hr/>
           <h2>Set Up</h2>
           <p>To start with, following the <a href='https://www.w3schools.com/REACT/DEFAULT.ASP'>W3SCHOOLS</a> tutorial, I used <i>create-react-app</i> to get a basic setup running that I could alter for my purposes. I then proceeded to use another demo from one of the <a href='https://reactjs.org/docs/rendering-elements.html'>REACT</a> tutorials on their website.</p>
 
@@ -98,6 +99,8 @@ function App() {
             </code>
           </pre>
 
+          <p>This one requires a little explanation.</p>
+
         <footer>
             <hr/>
             <small>Mark Foyster &copy; September 2022.</small>
@@ -114,7 +117,7 @@ function displayCode(fileName, id){
   fetch(fileName) 
 			.then(response => response.text()) 
 			.then(textString => {
-        console.log(textString);
+        //console.log(textString);
         document.getElementById(id).innerHTML = textString;
 			});
 	

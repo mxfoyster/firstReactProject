@@ -5,10 +5,10 @@ class Clock extends React.Component {
     let thisTime = thisDate.getTime()
     this.state = {startTime: thisTime, time: 0, stoppedTime: 0 , offsetTime: 0,  running: false, laps: [], lapAdded: false};
     
-    //so we can access the state in our from within our ***Clicked() functions
+    <span class="comment">//so we can access the state in our from within our ***Clicked() functions</span>
     this.pauseClicked = this.pauseClicked.bind(this); 
     this.resetClicked = this.resetClicked.bind(this);
     this.lapClicked = this.lapClicked.bind(this);
   }
 
-  //MORE CODE TO FOLLOW !!!!
+  <span class="comment">//MORE CODE TO FOLLOW !!!!</span>

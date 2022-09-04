@@ -1,15 +1,15 @@
-//where we will sort our start/stop logic
+<span class="comment">//where we will sort our start/stop logic</span>
   pauseClicked(){
     if(this.state.running){
       
       this.setState({running: false});
       let pauseBeginTime = this.updateTime();
-      this.setState({stoppedTime: pauseBeginTime}); //store time we paused
+      this.setState({stoppedTime: pauseBeginTime}); <span class="comment">//store time we paused</span>
     } 
     else {
       this.setState({running: true});
-      //offset time = current offset time + (Current time - time we stopped)
+      <span class="comment">//offset time = current offset time + (Current time - time we stopped)</span>
       let thisOffsetTime = this.state.offsetTime + (this.updateTime() - this.state.stoppedTime);
-      this.setState({offsetTime: thisOffsetTime}); //start our offset
+      this.setState({offsetTime: thisOffsetTime}); <span class="comment">//start our offset</span>
     }
   }

@@ -1,4 +1,4 @@
-//our timer function within the class
+<span class="comment">//our timer function within the class</span>
   tick() {
     if (this.state.running){
       this.setState({
