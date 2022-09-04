@@ -1,0 +1,4 @@
+//runs when we're done (Component removed?)
+  componentWillUnmount() {
+    clearInterval(this.timerID);
+  }

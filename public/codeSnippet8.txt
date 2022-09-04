@@ -1,0 +1,15 @@
+//where we will sort our start/stop logic
+  pauseClicked(){
+    if(this.state.running){
+      
+      this.setState({running: false});
+      let pauseBeginTime = this.updateTime();
+      this.setState({stoppedTime: pauseBeginTime}); //store time we paused
+    } 
+    else {
+      this.setState({running: true});
+      //offset time = current offset time + (Current time - time we stopped)
+      let thisOffsetTime = this.state.offsetTime + (this.updateTime() - this.state.stoppedTime);
+      this.setState({offsetTime: thisOffsetTime}); //start our offset
+    }
+  }

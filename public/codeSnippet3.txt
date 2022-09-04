@@ -1,0 +1,7 @@
+//runs at launch (Like Unity Start?)
+  componentDidMount() {
+    this.timerID = setInterval(
+      () => this.tick(),
+      10
+    );
+  }

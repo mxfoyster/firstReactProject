@@ -1,0 +1,15 @@
+const root = ReactDOM.createRoot(
+    document.getElementById('root')
+);
+
+function tick() {
+  const element = (
+    &lt;div>
+      &lt;h1>Hello, world!&lt;/h1>
+      &lt;h2>It is {new Date().toLocaleTimeString()}.&lt;/h2>
+    &lt;/div>
+  );
+  root.render(element);
+}
+
+setInterval(tick, 1000);

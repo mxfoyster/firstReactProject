@@ -1,0 +1,8 @@
+//our timer function within the class
+  tick() {
+    if (this.state.running){
+      this.setState({
+        time: this.updateTime()
+      });
+    }
+  }

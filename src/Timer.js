@@ -36,7 +36,7 @@ class Clock extends React.Component {
     clearInterval(this.timerID);
   }
 
-  //our own function within the class
+  //our timer function within the class
   tick() {
     if (this.state.running){
       this.setState({
@@ -112,7 +112,6 @@ class Clock extends React.Component {
           <Lap key={index} lapNumber={index} lapTime={value} /> //we need the key to have a unique 
           ))} 
         </div>
-      {/* {if (this.state.lapAdded){console.log("lap Added");}}   */}
       </span>
       
     );
