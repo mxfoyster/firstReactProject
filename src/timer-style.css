@@ -1,0 +1,50 @@
+.time{
+    color:green;
+    font-family: monospace;
+    font-size: 2rem;
+    font-weight: bold;
+    
+    padding: 0.2rem;
+}
+
+.timeBox{
+    display: inline-block;
+    background-color: #111111;
+    margin: 1rem;
+    border-radius: 6px;
+    border-style:inset;
+    border-color: aliceblue;
+}
+
+.timer{
+    display: inline-block;
+    margin: 1rem;
+    background-color:cadetblue;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.timerControl{
+    width: 31%;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    /* width: 100%; */
+    padding: 0.4rem;
+    margin: auto;
+}
+
+.lapTime{
+    display: block;
+    width: 90%;
+    height: 2.5rem;
+    /* max-height: 2.5rem; */
+    background-color:aliceblue;
+    border-radius: 4px;
+    overflow-y: scroll;
+    margin: auto;
+
+}

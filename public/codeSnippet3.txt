@@ -1,7 +1,7 @@
 <span class="comment">//runs at launch (Like Unity Start?)</span>
-  componentDidMount() {
+  <span class="function">componentDidMount() {</span>
     this.timerID = setInterval(
       () => this.tick(),
       10
     );
-  }
+  <span class="function">}</span>

@@ -1,15 +1,15 @@
 import React from 'react';
-//import ReactDOM from 'react-dom/client';
+import './timer-style.css';
 
 // ************************************ TIMER CODE **********************************
 class Clock extends React.Component {
   constructor(props) {
     super(props);
-    let thisDate = new Date()
-    let thisTime = thisDate.getTime()
+    let thisDate = new Date();
+    let thisTime = thisDate.getTime();
     this.state = {startTime: thisTime, time: 0, stoppedTime: 0 , offsetTime: 0,  running: false, laps: [], lapAdded: false};
     
-    //so we can access the state in our from within our ***Clicked() functions
+    //so we can access the state in our from within our ***Clicked() methods
     this.pauseClicked = this.pauseClicked.bind(this); 
     this.resetClicked = this.resetClicked.bind(this);
     this.lapClicked = this.lapClicked.bind(this);
@@ -62,10 +62,9 @@ class Clock extends React.Component {
   }
 
   resetClicked(){
-    let thisDate = new Date()
-    let thisTime = thisDate.getTime()
+    let thisDate = new Date();
+    let thisTime = thisDate.getTime();
     this.setState ({startTime: thisTime, time: 0, stoppedTime: 0 , offsetTime: 0,  running: false, laps: []});
-    this.updateTime();
   }
 
   lapClicked(){
@@ -75,7 +74,7 @@ class Clock extends React.Component {
   }
 
   updateTime(){
-    let dateNow = new Date()
+    let dateNow = new Date();
     // time now = (date now - date we started timer) - total duration of pauses
     let timeNow = (dateNow - this.state.startTime) - this.state.offsetTime;
     return timeNow;
@@ -104,7 +103,9 @@ class Clock extends React.Component {
         </span>
         <br />
         <span className="buttons">
-          <button onClick={this.pauseClicked} className="timerControl">{(this.state.running) ? "PAUSE" : (this.state.time === 0) ? "START" :"RESUME"}</button>
+          <button onClick={this.pauseClicked} className="timerControl">
+            {(this.state.running) ? "PAUSE" : (this.state.time === 0) ? "START" :"RESUME"}
+          </button>
           <button onClick={this.lapClicked} className="timerControl">LAP</button>
           <button onClick={this.resetClicked} className="timerControl">RESET</button>
         </span>

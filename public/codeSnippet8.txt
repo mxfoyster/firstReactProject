@@ -1,5 +1,5 @@
 <span class="comment">//where we will sort our start/stop logic</span>
-  pauseClicked(){
+  <span class="function">pauseClicked(){</span>
     if(this.state.running){
       
       this.setState({running: false});
@@ -12,4 +12,4 @@
       let thisOffsetTime = this.state.offsetTime + (this.updateTime() - this.state.stoppedTime);
       this.setState({offsetTime: thisOffsetTime}); <span class="comment">//start our offset</span>
     }
-  }
+  <span class="function">}</span>

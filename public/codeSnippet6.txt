@@ -1,8 +1,8 @@
 <span class="comment">//our timer function within the class</span>
-tick() {
+<span class="function">tick() {</span>
   if (this.state.running){
     this.setState({
       time: this.updateTime()
     });
   }
-}
+<span class="function">}</span>

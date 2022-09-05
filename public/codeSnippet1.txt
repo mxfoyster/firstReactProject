@@ -2,7 +2,7 @@ const root = ReactDOM.createRoot(
     document.getElementById('root')
 );
 
-function tick() {
+<span class="function">function tick() {</span>
   const element = (
     &lt;div>
       &lt;h1>Hello, world!&lt;/h1>
@@ -10,6 +10,6 @@ function tick() {
     &lt;/div>
   );
   root.render(element);
-}
+<span class="function">}</span>
 
 setInterval(tick, 1000);

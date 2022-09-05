@@ -1,4 +1,4 @@
 <span class="comment">//runs when we're done (Component removed?)</span>
-componentWillUnmount() {
+<span class="function">componentWillUnmount() {</span>
     clearInterval(this.timerID);
-}
+<span class="function">}</span>

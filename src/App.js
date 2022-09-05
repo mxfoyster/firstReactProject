@@ -26,6 +26,8 @@ function App() {
                 <Clock />
               </div>
             </div>
+            <h3>The Code</h3>
+            <p>The description of how this code works is quile long winded. I've broken it down the best I can below. If you want to follow along, you can find the code on my <a href='https://first-react.markfoyster.co.uk/'>GitHub</a> account.</p>
         </div>
           <hr/>
           <h2>Set Up</h2>
@@ -40,7 +42,7 @@ function App() {
           <hr/>
           <h2>Adapting the code</h2>
 
-          <p>I studied the above code and decided that with a little adaptation, I could turn this into a timer. This would mostly mean starting from scratch but it was a nopportunity to learn on the way. I started afresh, creating a React class to contain my timer component:</p>
+          <p>I studied the above code and decided that with a little adaptation, I could turn this into a timer. This would mostly mean starting from scratch but it was an opportunity to learn on the way. I started afresh, creating a React class to contain my timer component:</p>
 
           <pre>
             <code id="codeBox2">
@@ -48,7 +50,9 @@ function App() {
             </code>
           </pre>
 
-          <p>Note how there are a number of state variables used, we will discuss these as we go on and I list the functions / methods within this class. Furthermore, you will note how some functions are binded to the class. This allows me to use the state variables within these functions. There may be better ways to do this but I'm still learning!</p>
+          <p>To start with, I import <i>React</i> to derive the class from. Next I import my <i>CSS</i> file with the component styling in.  This is followed by the <i>Constructor</i>. Here I can do my initialisation, declare my state variables, etc. There are a number of state variables used, we will discuss these as we go through the rest of the code within this class.</p> 
+          
+          <p>You will note how some of my methods are bound to the class. This allows me to use the state variables within them. This seems to only be necessary on my control classes (For example, my <i>tick()</i> method doesn't need to be bound!). I am guessing it's because they are called from an event which is therefore outside the class? There may be better ways to do this but I'm still learning!</p>
 
           <h3>React Lifecycle Methods</h3>
 
@@ -104,7 +108,7 @@ function App() {
 
           <p> The next few methods are called when the user presses on of the controls on the timer. They are set up in the <i>Render()</i> method later.</p>
           
-          <p>We can start with the function that triggers the timer to start. When I first started development, I had it fire at startup so I called this <i>pauseClicked()</i>. On reflection, that was a poor name as I made the button handle "Start" AND "Pause" in the long run! Here it is: </p>
+          <p>We can start with the method that triggers the timer to start. When I first started development, I had it fire at startup so I called this <i>pauseClicked()</i>. On reflection, that was a poor name as I made the button handle "Start" AND "Pause" in the long run! Here it is: </p>
 
           <pre>
             <code id="codeBox8">
@@ -126,9 +130,9 @@ function App() {
             </code>
           </pre>
 
-          <p>This one is VERY straightforwards, it just sets all our state variables back to zero. you can see it also sets the start time to current time. This to be honest is legacy code from when I had the timer start automaticallyon load, I could remove this and set that state to zero, but it's not important, it will be reset when the timer is started using the previous function. Finally, we call <i>updateTime()</i> to, well..... actually, I probably don't need to on reflection.</p>
+          <p>This one is VERY straightforwards, it just sets all our state variables back to zero. you can see it also sets the start time to current time. This to be honest is legacy code from when I had the timer start automatically on load, I could remove this and set that state to zero, but it's not important, it will be reset when the timer is started using the previous function.</p>
 
-          <p>Now let's look at the <i>lapClicked()</i> function that is triggered when the user clicks the "LAP" button:</p>
+          <p>Now let's look at the <i>lapClicked()</i> method that is triggered when the user clicks the "LAP" button:</p>
 
           <pre>
             <code id="codeBox10">
@@ -150,7 +154,7 @@ function App() {
             </code>
           </pre>
           
-          <p>This one is pretty simple, we call it extensively when we need to access the current time on the timer elsewhere in this project. First we get a new Date so we can establish the current time. Next we compare that to the time we started the timer and subtract any delays  from pauses that we calculated earlier in the <i>pauseClicked()</i> control function. We now simply return the value to the calling function.</p>
+          <p>This one is pretty simple, we call it extensively when we need to access the current time on the timer elsewhere in this project. First we get a new Date so we can establish the current time. Next we compare that to the time we started the timer and subtract any delays  from pauses that we calculated earlier in the <i>pauseClicked()</i> control method. We now simply return the value to the calling function.</p>
 
           <p>Apart from where we the Render the JSX component itself, the last internal class function we have to deal with is the <i>formatMsToTime()</i> we discussed earlier. Here it is: </p>
 
@@ -162,7 +166,7 @@ function App() {
 
           <p>I've made these calculations before to do this code. I didn't fancy working out from scratch and I couldn't find the last example quickly, so I did cheat a little. I used this bit of code <a href='https://stackoverflow.com/questions/19700283/how-to-convert-time-in-milliseconds-to-hours-min-sec-format-in-javascript'>HERE</a> from stack overflow to save me some time. You will notice I tweaked it to include Milliseconds on the display. This function is VERY handy for me, allowing me to have a consistent firmat for time on both the timer display itself AND on the lap times. You will see how it adds a zero when there is only one number in the value to preserve the whole <i>HH:MM:SS:MS</i> format.</p>
 
-          <p>So, with regards to within the component class, the last function is where the timer itself is rendered. Here's the code:</p>
+          <p>So, with regards to within the component class, the last method is where the timer itself is rendered. Here's the code:</p>
 
           <pre>
             <code id="codeBox12b">
@@ -173,9 +177,9 @@ function App() {
           <p>This is where the real magic of JSX comes into play. The bulk of it is just like HTML asides from <i>class</i> being replaced with <i>className</i>. Inside any curly braces is where the magic happens. Here I can run my JavaScript. In most cases, you will see it's just state variables. There's a <i>array.map</i> style array method on our <i>laps</i> state variable. It simply iterates through the array and sends the values through to our <i>Lap</i> component which is called the appropriate number of times within the embedded arrow function.</p>
 
           <p>The beauty of React is that everytime the contents of this code changes, for example, when one of the state variables I have displayed in it is altered, that part of the display is re-rendered and if I understand correctly, ONLY that part of the code. That makes for an efficient way to update the browser just as much as is necessary.</p>
-          <h3>External methods, components and other code</h3>
+          <h3>External functions, components and other code</h3>
           
-          <p>Now let's dicuss the <i>Lap</i> component which resides outside the <i>Clock</i> class:</p>
+          <p>Now let's discuss the <i>Lap</i> component which resides outside the <i>Clock</i> class:</p>
 
           <pre>
             <code id="codeBox14">
@@ -215,6 +219,7 @@ function App() {
           </pre>
 
           <p>Note, the <i>Timer.js</i> is just the name I chose for my source file, it can be whatever name I like as log as it has a capital letter to start with and either <i>.js</i> or <i>.jsx</i> as the extension. When I am ready to include it, just as I did with the &lt;Lap/&gt; component, I use &lt;Clock/&gt; within my source. In my application, the source file is placed within the <i>/src</i> subdirectory of my file structure.</p>
+          
 
 
         <footer>

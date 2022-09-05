@@ -1,11 +1,14 @@
-class Clock extends React.Component {
+import React from 'react';
+import './timer-style.css';
+
+<span class="function">class Clock extends React.Component {</span>
   constructor(props) {
     super(props);
-    let thisDate = new Date()
-    let thisTime = thisDate.getTime()
+    let thisDate = new Date();
+    let thisTime = thisDate.getTime();
     this.state = {startTime: thisTime, time: 0, stoppedTime: 0 , offsetTime: 0,  running: false, laps: [], lapAdded: false};
     
-    <span class="comment">//so we can access the state in our from within our ***Clicked() functions</span>
+    <span class="comment">//so we can access the state in our from within our ***Clicked() methods</span>
     this.pauseClicked = this.pauseClicked.bind(this); 
     this.resetClicked = this.resetClicked.bind(this);
     this.lapClicked = this.lapClicked.bind(this);

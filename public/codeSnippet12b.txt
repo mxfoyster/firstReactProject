@@ -1,4 +1,4 @@
- render() {
+ <span class="function">render() {</span>
     return (
       &lt;span className="timer">
         &lt;span className="timeBox">
@@ -6,7 +6,9 @@
         &lt;/span>
         &lt;br />
         &lt;span className="buttons">
-          &lt;button onClick={this.pauseClicked} className="timerControl">{(this.state.running) ? "PAUSE" : (this.state.time === 0) ? "START" :"RESUME"}&lt;/button>
+          &lt;button onClick={this.pauseClicked} 
+            className="timerControl">{(this.state.running) ? "PAUSE" : (this.state.time === 0) ? "START" :"RESUME"}
+          &lt;/button>
           &lt;button onClick={this.lapClicked} className="timerControl">LAP&lt;/button>
           &lt;button onClick={this.resetClicked} className="timerControl">RESET&lt;/button>
         &lt;/span>
@@ -17,4 +19,4 @@
       &lt;/span>
       
     );
-  }
+  <span class="function">}</span>

@@ -1,7 +1,7 @@
-componentDidUpdate() {
+<span class="function">componentDidUpdate() {</span>
     <span class="comment">//if we added a lap, we want to scroll to the bottom but only ONCE hence a flag we reset</span>
     if (this.state.lapAdded){
       scrollToBottom();
       this.setState({lapAdded: false});
     };
-}
+<span class="function">}</span>

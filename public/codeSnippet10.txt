@@ -1,5 +1,5 @@
-lapClicked(){
+<span class="function">lapClicked(){</span>
     let lapArray = [...this.state.laps];
     lapArray.push(this.formatMsToTime(this.state.time));
     this.setState({laps: lapArray, lapAdded: true}); <span class="comment">//we also set our flag so we can scroll box down later</span>
-  }
+  <span class="function">}</span>

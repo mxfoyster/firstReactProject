@@ -1,5 +1,5 @@
 <span class="comment">//returns milliseconds converted into the HH:MM:SS:MsMs format (human readability)</span>
-  formatMsToTime(duration) {
+  <span class="function">formatMsToTime(duration) {</span>
     var milliseconds = Math.floor((duration % 1000) / 10),
     seconds = Math.floor((duration / 1000) % 60),
     minutes = Math.floor((duration / (1000 * 60)) % 60),
@@ -11,4 +11,4 @@
     milliseconds = (milliseconds < 10) ? "0" + milliseconds  : milliseconds;
   
     return hours + ":" + minutes + ":" + seconds + "." + milliseconds;
-  }
+  <span class="function">}</span>

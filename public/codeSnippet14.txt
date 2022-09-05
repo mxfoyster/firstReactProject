@@ -1,7 +1,7 @@
 <span class="comment">//component for lap time (used in Clock component)</span>
-const Lap = ({ lapNumber, lapTime}) => (
+<span class="function">const Lap </span>= ({ lapNumber, lapTime}) => (
   &lt;div>
     &lt;b>LAP {lapNumber +1}:&lt;/b> {lapTime}
   &lt;/div>
   
-);
+<span class="function">);</span>

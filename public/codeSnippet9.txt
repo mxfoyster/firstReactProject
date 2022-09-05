@@ -1,6 +1,5 @@
-resetClicked(){
-    let thisDate = new Date()
-    let thisTime = thisDate.getTime()
+<span class="function">resetClicked(){</span>
+    let thisDate = new Date();
+    let thisTime = thisDate.getTime();
     this.setState ({startTime: thisTime, time: 0, stoppedTime: 0 , offsetTime: 0,  running: false, laps: []});
-    this.updateTime();
-  }
+  <span class="function">}</span>

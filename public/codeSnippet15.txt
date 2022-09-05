@@ -1,4 +1,4 @@
-function scrollToBottom(){
+<span class="function">function scrollToBottom(){</span>
   let lapDiv = document.getElementById("lapBox");
   lapDiv.scrollTop = lapDiv.scrollHeight;
-}
+<span class="function">}</span>
