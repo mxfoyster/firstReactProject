@@ -218,7 +218,7 @@ function App() {
             </code>
           </pre>
 
-          <p>Note, the <i>Timer.js</i> is just the name I chose for my source file, it can be whatever name I like as log as it has a capital letter to start with and either <i>.js</i> or <i>.jsx</i> as the extension. When I am ready to include it, just as I did with the &lt;Lap/&gt; component, I use &lt;Clock/&gt; within my source. In my application, the source file is placed within the <i>/src</i> subdirectory of my file structure.</p>
+          <p>Note, the <i>Timer.js</i> is just the name I chose for my source file, it can be whatever name I like as log as it has a capital letter to start with and either <i>.js</i> or <i>.jsx</i> as the extension. When I am ready to include it, just as I did with the &lt;Lap/&gt; component, I use &lt;Clock/&gt; within my source along with my <i>timer-style.css</i> file. In my application, the source file is placed within the <i>/src</i> subdirectory of my file structure.</p>
           
 
 
