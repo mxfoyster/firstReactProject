@@ -1,0 +1,4 @@
+function scrollToBottom(){
+  let lapDiv = document.getElementById("lapBox");
+  lapDiv.scrollTop = lapDiv.scrollHeight;
+}

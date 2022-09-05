@@ -109,24 +109,13 @@ class Clock extends React.Component {
           <button onClick={this.resetClicked} className="timerControl">RESET</button>
         </span>
         <div className="lapTime" id='lapBox'>{this.state.laps.map((value, index) => (
-          <Lap key={index} lapNumber={index} lapTime={value} /> //we need the key to have a unique 
+          <Lap key={index} lapNumber={index} lapTime={value} /> //we need the key to have a unique value 
           ))} 
         </div>
       </span>
       
     );
   }
-}
-
-//gives us three instances of Clock
-function TimeApp() {
-  return (
-    <div className="timers">
-      <Clock />
-      <Clock />
-      <Clock />
-    </div>
-  );
 }
 
 //component for lap time (used in Clock component)
@@ -142,4 +131,4 @@ function scrollToBottom(){
   lapDiv.scrollTop = lapDiv.scrollHeight;
 }
 
-export default TimeApp;
+export default Clock;

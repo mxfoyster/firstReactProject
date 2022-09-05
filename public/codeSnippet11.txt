@@ -1,0 +1,6 @@
+ updateTime(){
+    let dateNow = new Date()
+    <span class="comment">// time now = (date now - date we started timer) - total duration of pauses</span>
+    let timeNow = (dateNow - this.state.startTime) - this.state.offsetTime;
+    return timeNow;
+  }

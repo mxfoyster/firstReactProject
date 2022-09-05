@@ -14,6 +14,10 @@ header{
     border-radius: 10px;
 }
 
+h3{
+    color: blue;
+}
+
 .comment{
     color: green;
 }
