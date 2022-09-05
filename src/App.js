@@ -99,7 +99,32 @@ function App() {
             </code>
           </pre>
 
-          <p>This one requires a little explanation.</p>
+          <p>This one requires a little explanation. As you can see, the code is broken into two main blocks via the evaluation of the <i>running</i> state variable (my flag for when the timer is running). This allows the function to handle both start / resume AND pause / stop functionality.</p>
+          
+          <p>If the timer is running, the first thing we do is change the state variable (our flag) to 'False' so we will be able to ascertain on the next 'click' we intend to restart. Now we retrieve and then store the time we paused at for use later (Arguably, I should have THIS first for better accuracy).</p>
+
+          <p>If the timer is not running when the button is clicked, as before, we change our state variable, this time to 'running: true'. Now with the 'stopped' time we stored earlier, the current time and the current time, we can calculate and update offset time which as we discussed earlier is a cumulative total time the timer has been in 'paused' state since it was first activated. We have everything we need to keep the timer value correct.</p>
+
+          <p>Now for our Reset button code:</p>
+
+          <pre>
+            <code id="codeBox9">
+              {displayCode("codeSnippet9.txt", "codeBox9")}
+            </code>
+          </pre>
+
+          <p>This one is VERY straightforwards, it just sets all our state variables back to zero. you can see it also sets the start time to current time. This to be honest is legacy code from when I had the timer start automaticallyon load, I could remove this and set that state to zero, but it's not important, it will be reset when the timer is started using the previous function. Finally, we call <i>updateTime()</i> to, well..... actually, I probably don't need to on reflection.</p>
+
+          <p>Now let's look at the <i>lapClicked()</i> function that is triggered when the user clicks the "LAP" button:</p>
+
+          <pre>
+            <code id="codeBox10">
+              {displayCode("codeSnippet10.txt", "codeBox10")}
+            </code>
+          </pre>
+
+
+
 
         <footer>
             <hr/>

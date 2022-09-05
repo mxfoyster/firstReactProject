@@ -25,7 +25,7 @@ pre{
     border-style:groove;
     border-radius: 5px;
     padding: 1rem;
-    overflow-x:scroll;
+    overflow-x:auto;
     max-width: 90%;
 }
 
