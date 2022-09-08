@@ -8,18 +8,23 @@ test('renders timer successfully', () => {
 
 test('Displays Start button', () => {
     render(<Clock />);
-    const linkElement = screen.getByText(/start/i);
-    expect(linkElement).toBeInTheDocument();
+    const buttonString = screen.getByText(/start/i);
+    expect(buttonString).toBeInTheDocument();
   });
 
-  test('Displays Lap button', () => {
-    render(<Clock />);
-    const linkElement = screen.getByText(/lap/i);
-    expect(linkElement).toBeInTheDocument();
-  });
+test('Displays Lap button', () => {
+  render(<Clock />);
+  const buttonString = screen.getByText(/lap/i);
+  expect(buttonString).toBeInTheDocument();
+});
 
-  test('Displays Reset button', () => {
-    render(<Clock />);
-    const linkElement = screen.getByText(/reset/i);
-    expect(linkElement).toBeInTheDocument();
-  });
+test('Displays Reset button', () => {
+  render(<Clock />);
+  const buttonString = screen.getByText(/reset/i);
+  expect(buttonString).toBeInTheDocument();
+}); 
+
+// test ('check formatMsToTime(duration) works', () =>{
+//   const result = shallow(<Clock/>);
+//   expect(result).toBe("00:00:00:00");
+// });

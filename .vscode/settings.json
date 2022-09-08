@@ -1,0 +1,5 @@
+{
+    "testing.alwaysRevealTestOnStateChange": true
+    
+}
+//testExplorer = {enabled: true; showClassicStatus?: boolean; showInlineError?: boolean}

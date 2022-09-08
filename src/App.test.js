@@ -6,3 +6,4 @@ test('renders W3SCHOOLS', () => {
   const linkElement = screen.getByText(/W3SCHOOLS/i);
   expect(linkElement).toBeInTheDocument();
 });
+ 
