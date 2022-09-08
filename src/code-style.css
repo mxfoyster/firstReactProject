@@ -1,0 +1,18 @@
+
+.comment{
+    color: #0a0;
+}
+.function{
+    color: lightskyblue;
+}
+
+pre{
+    display: inline-block;
+    background-color:#222;
+    color: yellow;
+    border-style:groove;
+    border-radius: 5px;
+    padding: 1rem;
+    overflow-x:auto;
+    max-width: 90%;
+}
