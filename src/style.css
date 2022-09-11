@@ -29,13 +29,21 @@ h3{
     font-size: 4rem;
     color:blue;
     min-width: 100%;
+    margin-bottom: 0.5rem;
 }
 
 .subHeading{
     display: block;
     text-align: center;
+    margin-top: 0.5rem;
 }
 
+.mainNav{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    text-align: center;
+}
 
 .red{
     border-radius: 6px;

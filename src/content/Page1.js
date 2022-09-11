@@ -1,6 +1,6 @@
 import React from 'react';
-import Clock from './Timer.js';
-import Codebox from './Codebox.js';
+import Clock from '../Timer.js';
+import Codebox from '../Codebox.js';
 
 class Page1 extends React.Component {
     constructor(props) {

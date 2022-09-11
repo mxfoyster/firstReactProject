@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react';
 import logo from './React-icon.svg';
 import './style.css';
 //import './highlight.min.js'; 
-import Page1 from './Page1.js';
-import Clock from './Timer.js';
+import Page1 from './content/Page1.js';
+import Page2 from './content/Page2.js';
+import Page3 from './content/Page3.js';
 
 
 function App() { 
@@ -17,8 +18,9 @@ function App() {
   }
 
   function Page(){
-    if (page == 1)return <Page1/>
-        else return <Clock/>
+    if (page === 1) return <Page1/>
+    else if (page === 2) return <Page2/>
+    else return <Page3/>
   }
 
   return (
@@ -29,8 +31,13 @@ function App() {
             <div>
                 <h1 className="heading">My First React Project</h1>
                 <h2 className='subHeading'>By Mark Foyster</h2>
+                <nav className='mainNav'>
+                  <button onClick={(e)=>changePage(e,1)}>Timer App</button> 
+                  <button onClick={(e)=>changePage(e,2)}>Code Box</button>
+                  <button onClick={(e)=>changePage(e,3)}>Other projects</button>
+                </nav>
             </div>
-            <button onClick={(e)=>changePage(e,1)}>Page 1</button> <button onClick={(e)=>changePage(e,2)}>Page 2</button>
+            
         </header>
           
        {/* Call our Page() function which will return the appropriate page component */}
