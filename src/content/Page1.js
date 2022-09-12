@@ -86,7 +86,7 @@ render(){
 
             <Codebox number="9"/>
 
-            <p>This one is VERY straightforwards, it just sets all our state variables back to zero. you can see it also sets the start time to current time. This to be honest is legacy code from when I had the timer start automatically on load, I could remove this and set that state to zero, but it's not important, it will be reset when the timer is started using the previous function.</p>
+            <p>This one is VERY straightforward, it just sets all our state variables back to zero. you can see it also sets the start time to current time. This to be honest is legacy code from when I had the timer start automatically on load, I could remove this and set that state to zero, but it's not important, it will be reset when the timer is started using the previous function.</p>
 
             <p>Now let's look at the <i>lapClicked()</i> method that is triggered when the user clicks the "LAP" button:</p>
 

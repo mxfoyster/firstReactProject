@@ -33,7 +33,7 @@ function App() {
                 <h2 className='subHeading'>By Mark Foyster</h2>
                 <nav className='mainNav'>
                   <button onClick={(e)=>changePage(e,1)}>Timer App</button> 
-                  <button onClick={(e)=>changePage(e,2)}>Code Box</button>
+                  <button onClick={(e)=>changePage(e,2)}>Code Review</button>
                   <button onClick={(e)=>changePage(e,3)}>Other projects</button>
                 </nav>
             </div>
