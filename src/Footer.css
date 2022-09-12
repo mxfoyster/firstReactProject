@@ -1,0 +1,30 @@
+.linkBox{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.link{
+    background-color:cornflowerblue;
+    padding: 0.25rem;
+    margin: 0.25rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius:6px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: azure;
+}
+
+.footer{
+    text-align: center;
+    background-color:darkgrey;
+    border-radius: 10px;
+    padding-bottom: 0.5rem;
+}
+
+@media (min-width: 500px) {
+    .link{
+        font-size: 1rem;
+    }
+}

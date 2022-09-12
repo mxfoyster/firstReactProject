@@ -1,20 +1,13 @@
-import React from 'react';
+import './page3.css';
 
-class Page3 extends React.Component {
-    constructor(props) {
-      super(props);
-    }
-render(){
+function Page3(){
     return(
         <div id="middle" className="middle">
-            <h2>Other projects and useful links</h2>
-            <p>Just stuff really!!</p>
-            
+            <h2>Other Stuff</h2>
+            <p>Something's coming here!!</p>
         </div>
-        );
-    } //end of render method
+    )
 
-
-} //end of class
+} //end of Page3 component
 
 export default Page3;

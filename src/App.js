@@ -5,6 +5,7 @@ import './style.css';
 import Page1 from './content/Page1.js';
 import Page2 from './content/Page2.js';
 import Page3 from './content/Page3.js';
+import Footer from './Footer.js';
 
 
 function App() { 
@@ -34,7 +35,7 @@ function App() {
                 <nav className='mainNav'>
                   <button onClick={(e)=>changePage(e,1)}>Timer App</button> 
                   <button onClick={(e)=>changePage(e,2)}>Code Review</button>
-                  <button onClick={(e)=>changePage(e,3)}>Other projects</button>
+                  <button onClick={(e)=>changePage(e,3)}>Other Stuff</button>
                 </nav>
             </div>
             
@@ -42,12 +43,8 @@ function App() {
           
        {/* Call our Page() function which will return the appropriate page component */}
         <Page/>
-
-        <footer>
-            <hr/>
-            <small>Mark Foyster &copy; September 2022.</small>
-        </footer>
-
+        <hr/>
+        <Footer/>
       </div>
     </div>
     
