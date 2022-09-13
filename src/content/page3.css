@@ -1,2 +1,31 @@
+ .tableContainer{
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    max-height: 14rem;
+    overflow-y: scroll;
+    border-style: ridge;
+    border-radius:10px;
+} 
 
+.dataTable > tr{
+    padding: 0.5rem;
+    border-radius:10px;
+}
 
+.dataTableHeading{
+    background-color:lightgray;
+    font-weight: bold;
+    text-align: center;
+}
+
+.dataTableHeading > tr > td{
+    padding: 0.5rem;
+}
+.dataTableBody{
+    text-align: center;
+}
+
+.dataTableBody tr:nth-child(even) {background: lightblue}
+.dataTableBody tr:nth-child(odd) {background: green}
