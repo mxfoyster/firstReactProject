@@ -11,4 +11,15 @@ The timer component is created as an **ES6** Class style component and is self c
 
 Overall, it's my first React project, I've learnt a lot and have no regrets. There is still much room for improvement. I still have a lot to learn.
 
-I'm loving the whole compononent centric style approach to React. It make it easier to create truly Abstract code that is easy to re-purpose later.
+I'm loving the whole component centric style approach to React. It make it easier to create truly Abstract code that is easy to re-purpose later.
+
+## Additional content
+
+I have added a simple menu that separates the middle content into components allowing React to swap it out for a 'Multi Page' style website without a complete reload.
+
+The pages include
+
+- *Code Review* page that briefly discusses some of the concepts I have learnt through this project.
+
+- *Other Stuff* page which for now imports and displays some data from a MySql database using an API from another project. 
+
