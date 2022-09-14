@@ -5,6 +5,7 @@ import './style.css';
 import Page1 from './content/Page1.js';
 import Page2 from './content/Page2.js';
 import Page3 from './content/Page3.js';
+import Page4 from './content/Page4.js';
 import Footer from './Footer.js';
 
 
@@ -19,9 +20,21 @@ function App() {
   }
 
   function Page(){
-    if (page === 1) return <Page1/>
-    else if (page === 2) return <Page2/>
-    else return <Page3/>
+    
+    switch (page) {
+      case 1:
+        return <Page1/>
+        break;
+      case 2:
+          return <Page2/>
+          break;
+      case 3:
+          return <Page3/>
+          break;
+      default:
+          return <Page4/>
+        break;
+    }
   }
 
   return (
@@ -33,7 +46,8 @@ function App() {
                 <h1 className="heading">My First React Project</h1>
                 <h2 className='subHeading'>By Mark Foyster</h2>
                 <nav className='mainNav'>
-                  <button onClick={(e)=>changePage(e,1)}>Timer App</button> 
+                  <button onClick={(e)=>changePage(e,1)}>Timer App</button>
+                  <button onClick={(e)=>changePage(e,4)}>Pop Up</button>  
                   <button onClick={(e)=>changePage(e,2)}>Code Review</button>
                   <button onClick={(e)=>changePage(e,3)}>Other Stuff</button>
                 </nav>
