@@ -24,16 +24,12 @@ function App() {
     switch (page) {
       case 1:
         return <Page1/>
-        break;
       case 2:
           return <Page2/>
-          break;
       case 3:
           return <Page3/>
-          break;
       default:
           return <Page4/>
-        break;
     }
   }
 
