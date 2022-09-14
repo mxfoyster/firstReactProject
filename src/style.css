@@ -2,6 +2,7 @@ body
 {
 	margin: auto;
     padding: 0.5rem;
+   
     /* font-size: 1.2em; */
 }
 
@@ -20,6 +21,8 @@ h3{
 
 .middle{
     display: block;
+    background-color:aliceblue;
+    border-radius: 10px;
 }
 
 
@@ -78,6 +81,15 @@ h3{
 
 @media (min-width: 500px) {
 
+    body{
+        background-image: url("./bkg2.jpg");
+    }
+
+    .middle{
+        padding: 0.5rem;
+        margin-top: 0.7rem;
+        margin-bottom: 0.7rem;
+    }
     .heading{
         font-size: 3rem;
     }

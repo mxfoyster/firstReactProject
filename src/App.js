@@ -43,7 +43,7 @@ function App() {
           
        {/* Call our Page() function which will return the appropriate page component */}
         <Page/>
-        <hr/>
+        
         <Footer/>
       </div>
     </div>

@@ -1,6 +1,7 @@
 body 
 {
 	margin: auto;
+    background-image: url("./bkg1.jpg");
     /* font-size: 1.2em; */
 }
 
@@ -14,6 +15,8 @@ header{
 
 .middle{
     display: block;
+    background-color:aliceblue;
+    border-radius: 10px;
 }
 
 
