@@ -6,7 +6,7 @@ import Page1 from './content/Page1.js';
 import Page2 from './content/Page2.js';
 import Page3 from './content/Page3.js';
 import Page4 from './content/Page4.js';
-import Footer from './Footer.js';
+import Footer from './modules/Footer.js';
 
 
 function App() { 

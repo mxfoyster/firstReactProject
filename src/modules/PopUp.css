@@ -1,12 +1,27 @@
 .popUpContainer{
     border-radius:20px;
-    border-style:groove;
+    border-style:outset;
     position: fixed;
     top:50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color:antiquewhite;
+    background-color:lavender;
     padding: 0.7rem;
+}
+
+.popUpTopBar{
+    height: 40px;
+    padding: 2px;
+    text-align: center;
+}
+
+.popUpTitle{
+    color:blue;
+    font-weight: bold;
+    background-color:aliceblue;
+    border-radius: 6px;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
 }
 
 .popUpIsLarge{
@@ -62,9 +77,8 @@
 }
 
 .closeBtn{
-    position:absolute;
-	right: 10px;
-	top: 10px;
+    position:relative;
+	float:right;
 	z-index: 4; 
 }
 
@@ -76,5 +90,9 @@
 
     .popUpIsSmall{
         width: 30%;
+    }
+    
+    .popUpTitle{
+        font-size: 1.4rem;
     }
 }

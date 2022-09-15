@@ -1,11 +1,11 @@
 import React from 'react';
-import Clock from '../Timer.js';
-import Codebox from '../Codebox.js';
+import Clock from '../modules/Timer.js';
+import Codebox from '../modules/Codebox.js';
 
 class Page1 extends React.Component {
-    constructor(props) {
-      super(props);
-    }
+    // constructor(props) {
+    //   super(props);
+    // }
 render(){
     return(
         <div id="middle" className="middle">

@@ -20,7 +20,8 @@ function PopUp(props){
     
     return(
         <div id={containerID} className='popUpContainer'>
-            <img id={closeBtnID} className='closeBtn' src="./images/closebtn.png" alt="Close Pop Up Window"/>
+            <div className="popUpTopBar"><span className='popUpTitle'>{props.title}</span><img id={closeBtnID} className='closeBtn' src="./images/closebtn.png" alt="Close Pop Up Window"/></div>
+            
             {props.children}
         </div>
     )

@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Clock from './Timer.js';
+import Clock from './modules/Timer.js';
 
 test('renders timer successfully', () => {
   render(<Clock />);

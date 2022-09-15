@@ -3,7 +3,7 @@ import './code-style.css';
 
 function Codebox(props){
     const [data,setData] = useState(0); //using a state variable makes sure we re-render
-    let fileName = "codeSnippet" + props.number + ".txt";
+    const fileName = "codeSnippet" + props.number + ".txt";
     let thisID = "codeBox" + props.number; 
 
     //the fetch function
@@ -18,7 +18,7 @@ function Codebox(props){
     //using the effect hook to run the fetch function (prevent infinite loop)
     useEffect(()=>{
         getCode(fileName);
-        },[])
+        },[fileName])
     
     //returning the component WITH the data for rendering
     return(
