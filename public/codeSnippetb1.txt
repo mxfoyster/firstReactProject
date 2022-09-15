@@ -1,0 +1,12 @@
+<span class="function">&lt;PopUp buttonID="testPopUp" size="small" title="Pop Up Test"&gt;</span>
+    &lt;h2&gt;This is a Small Pop Up test&lt;/h2&gt;
+    &lt;p&gt;This is some test content just added between the component tags <br/>and retrieved by the component via &lt;b&gt;&lt;i&gt;props.children&lt;/i&gt;&lt;/b&gt;.&lt;/p&gt;
+<span class="function">&lt;/PopUp&gt;</span><br/>
+<span class="function">&lt;PopUp buttonID="testPopUp2" size="med" title="Pop Up Test"&gt;</span>
+    &lt;h2&gt;This is a Medium Pop Up test&lt;/h2&gt;
+    &lt;p&gt;This is some test content just added between the component tags <br/>and retrieved by the component via &lt;b&gt;&lt;i&gt;props.children&lt;/i&gt;&lt;/b&gt;.&lt;/p&gt;
+<span class="function">&lt;/PopUp&gt;</span><br/>
+<span class="function">&lt;PopUp buttonID="testPopUp3" size="large" title="Pop Up Test"&gt;</span>
+    &lt;h2&gt;This is a Large Pop Up test&lt;/h2&gt;
+    &lt;p&gt;This is some test content just added between the component tags <br/>and retrieved by the component via &lt;b&gt;&lt;i&gt;props.children&lt;/i&gt;&lt;/b&gt;.&lt;/p&gt;
+<span class="function">&lt;/PopUp&gt;</span>

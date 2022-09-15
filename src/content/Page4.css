@@ -3,3 +3,7 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
+.attribList > li{
+padding-top: 0.5rem;
+padding-bottom: 0.5rem;
+}

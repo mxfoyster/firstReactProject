@@ -1,0 +1,5 @@
+<span class="function">&lt;div className="buttonsContainer"&gt;</span>
+    &lt;button id="testPopUp"&gt;Small Pop Up&lt;/button&gt;
+    &lt;button id="testPopUp2"&gt;Medium Pop Up&lt;/button&gt;
+    &lt;button id="testPopUp3"&gt;Large Pop Up&lt;/button&gt;
+<span class="function">&lt;/div&gt;</span>

@@ -1,0 +1,9 @@
+<span class="function">&lt;PopUp buttonID="testPopUp4" size="large" title="Pop Up Parent"&gt;</span>
+    &lt;h2&gt;This is a nested Pop Up test&lt;/h2&gt;
+    &lt;p&gt;Press the button below to open the next pop up.&lt;/p&gt;
+    &lt;button id="testPopUp5"&gt;Child Pop Up&lt;/button&gt;
+    <span class="function">&lt;PopUp buttonID="testPopUp5" size="small" title="Pop Up Child"&gt;</span>
+        &lt;h2&gt;Child Pop Up&lt;/h2&gt;
+        &lt;p&gt;Here is our child pop up&lt;/p&gt;
+    <span class="function">&lt;/PopUp&gt;</span>
+<span class="function">&lt;/PopUp&gt;</span>
