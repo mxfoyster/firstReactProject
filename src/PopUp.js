@@ -3,8 +3,8 @@ import './PopUp.css';
 
 function PopUp(props){
     //we must have a unique id for each instance, we can base it on the Button ID
-    let containerID = props.buttonID + "_container";
-    let closeBtnID = props.buttonID + "_closeBtn";
+    const containerID = props.buttonID + "_container";
+    const closeBtnID = props.buttonID + "_closeBtn";
 
     useEffect(() => {
         //CODE HERE SHOULD ONLY RUN AFTER FIRST MOUNT
@@ -16,7 +16,7 @@ function PopUp(props){
         closeBtn.addEventListener('click', ()=>{closePopUp(popUpWindow)});
         sizePopUp(popUpWindow, props.size);
         // return () => //clean up code can go here
-      }, [])  // <-- Empty array triggers this ONCE ONLY behaviour
+      }, [containerID, closeBtnID, props])  // <-- The effect will only run more than once if something in this array changes (It won't!)
     
     return(
         <div id={containerID} className='popUpContainer'>

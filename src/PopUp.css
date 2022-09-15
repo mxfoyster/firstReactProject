@@ -1,5 +1,6 @@
 .popUpContainer{
     border-radius:20px;
+    border-style:groove;
     position: fixed;
     top:50%;
     left: 50%;
@@ -15,12 +16,12 @@
 
 .popUpIsMedium{
     height: 60%;
-    width: 60%;
+    width: 80%;
 }
 
 .popUpIsSmall{
     height: 30%;
-    width: 30%;
+    width: 70%;
 }
 
 @keyframes popUpFadeIn 
@@ -65,4 +66,15 @@
 	right: 10px;
 	top: 10px;
 	z-index: 4; 
+}
+
+@media (min-width: 900px) {
+
+    .popUpIsMedium{
+        width: 60%;
+    }
+
+    .popUpIsSmall{
+        width: 30%;
+    }
 }
