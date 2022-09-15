@@ -1,11 +1,26 @@
-#popUpContainer{
+.popUpContainer{
     border-radius:20px;
     position: fixed;
-    top:10%;
-    left: 10%;
-    width: 80%;
-    height: 80%;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color:antiquewhite;
+    padding: 0.7rem;
+}
+
+.popUpIsLarge{
+    height: 90%;
+    width: 90%;
+}
+
+.popUpIsMedium{
+    height: 60%;
+    width: 60%;
+}
+
+.popUpIsSmall{
+    height: 30%;
+    width: 30%;
 }
 
 @keyframes popUpFadeIn 
@@ -41,8 +56,11 @@
     animation: popUpFadeOut 0.5s ease-in-out;
     visibility: hidden;
 }
+.popUpFirstLoad{
+    visibility: hidden;
+}
 
-#closeBtn{
+.closeBtn{
     position:absolute;
 	right: 10px;
 	top: 10px;
